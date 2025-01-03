@@ -5,8 +5,6 @@ import { HeaderContainer, HeaderNavigation } from "./styles";
 export function Header() {
   const location = useLocation();
 
-  console.log(location);
-
   return (
     <HeaderContainer>
       <HoverEffect href="/">&#169; Feito por Gustavo</HoverEffect>
