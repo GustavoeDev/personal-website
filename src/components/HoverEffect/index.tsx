@@ -18,11 +18,11 @@ export function HoverEffect({
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const { offsetX, offsetY, target } = e.nativeEvent;
-    const { clientWidth, clientHeight } = target as HTMLElement;
+    const { clientX, clientY, currentTarget } = e;
+    const { left, top, width, height } = currentTarget.getBoundingClientRect();
 
-    const x = (offsetX - clientWidth / 2) * factor;
-    const y = (offsetY - clientHeight / 2) * factor;
+    const x = (clientX - left - width / 2) * factor;
+    const y = (clientY - top - height / 2) * factor;
 
     setOffset({ x, y });
   };
