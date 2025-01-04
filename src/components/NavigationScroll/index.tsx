@@ -15,10 +15,6 @@ export function NavigationScroll() {
     }
   };
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -28,11 +24,7 @@ export function NavigationScroll() {
   }, []);
 
   return (
-    <HoverEffect
-      as={NavigationButton}
-      onClick={scrollToTop}
-      className={isVisible ? "visible" : ""}
-    >
+    <HoverEffect as={NavigationButton} className={isVisible ? "visible" : ""}>
       <List size={24} />
     </HoverEffect>
   );

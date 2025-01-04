@@ -5,6 +5,23 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+
+        scrollbar-width: thin;
+        scrollbar-color: ${(props) => props.theme["gray-500"]} ${(props) =>
+  props.theme["dark-500"]};
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${(props) => props.theme["dark-500"]};
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${(props) => props.theme["gray-500"]};
+        border-radius: 4px;
     }
 
     :focus {
