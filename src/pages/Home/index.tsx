@@ -7,25 +7,27 @@ import {
   PersonalInfosContainer,
   Profession,
 } from "./styles";
+import { NavigationScroll } from "../../components/NavigationScroll";
 
 export function Home() {
   return (
     <>
+      <NavigationScroll />
       <HomeBannerContainer>
         <Header />
         <PersonalInfosContainer>
           <Location>
-            <div className="info-location">
+            <div className="infoLocation">
               <p>Pau dos Ferros</p>
               <span>Rio Grande do Norte</span>
             </div>
-            <span className="icon-globe">
+            <span className="iconGlobe">
               <Globe size={32} />
             </span>
           </Location>
           <Profession>
             <ArrowDownRight size={32} />
-            <div className="info-profession">
+            <div className="infoProfession">
               <span>Desenvolvedor</span>
               <p>FrontEnd Júnior</p>
             </div>
@@ -38,6 +40,7 @@ export function Home() {
           </div>
         </NameInfinite>
       </HomeBannerContainer>
+      <div style={{ height: "100vh" }}>oi</div>
     </>
   );
 }

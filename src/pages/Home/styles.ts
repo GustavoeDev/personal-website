@@ -33,12 +33,12 @@ export const Location = styled.div`
   align-items: center;
   gap: 1.5rem;
 
-  .info-location {
+  .infoLocation {
     font-size: 0.875rem;
     font-family: "Poppins", sans-serif;
   }
 
-  .icon-globe {
+  .iconGlobe {
     background-color: ${(props) => props.theme["gray-500"]};
     padding: 0.75rem;
     border-radius: 50%;
@@ -56,8 +56,8 @@ export const Profession = styled.div`
   flex-direction: column;
   gap: 4rem;
 
-  .info-profession {
-    font-size: 2rem;
+  .infoProfession {
+    font-size: 1.75rem;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
   }
