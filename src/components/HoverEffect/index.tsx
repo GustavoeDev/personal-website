@@ -6,6 +6,7 @@ interface HoverEffectProps extends React.HTMLAttributes<HTMLElement> {
   factor?: number;
   href?: string;
   children: React.ReactNode;
+  target?: string;
 }
 
 export function HoverEffect({
@@ -13,6 +14,7 @@ export function HoverEffect({
   factor = 0.3,
   children,
   href,
+  target,
   ...props
 }: HoverEffectProps) {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -37,6 +39,7 @@ export function HoverEffect({
       onMouseMove={handleMouseMove}
       onMouseLeave={resetOffset}
       {...(as === "a" && href ? { href } : {})}
+      {...(as === "a" && target ? { target } : {})}
       {...props}
     >
       {children}

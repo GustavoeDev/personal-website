@@ -10,4 +10,5 @@ export const ComponentHover = styled.div<HoverProps>`
   transform: ${({ x, y }) => `translate(${x}px, ${y}px)`};
   transition: transform 0.1s ease-out;
   cursor: pointer;
+  text-decoration: none;
 `;
